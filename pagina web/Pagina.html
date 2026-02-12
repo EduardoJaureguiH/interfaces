@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Tu tienda online</title>
+    <!-- <style> -->
+        /* Selectores de etiquetas */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 130px;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1001;
+        }
+
+        header > div {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #logo {
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #333;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 77px;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #667eea;
+        }
+
+        /* Sección principal */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #667eea;
+            font-size: 2rem;
+        }
+
+        /* Galería de productos */
+        .productos-galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Tarjetas de producto */
+        .producto-tarjeta {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .producto-tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+
+        .producto-imagen {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+        }
+
+        .producto-info {
+            padding: 1.5rem;
+        }
+
+        .producto-nombre {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .producto-descripcion {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .producto-precio {
+            font-size: 1.5rem;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Botón */
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #667eea;
+            color: white;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            background-color: #764ba2;
+            border-color: #764ba2;
+            transform: scale(1.02);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            border-top: 3px solid #667eea;
+        }
+
+        footer > div {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-contenido {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-seccion h3 {
+            margin-bottom: 1rem;
+            color: #667eea;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-seccion p {
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+
+        .footer-seccion a {
+            color: #90a4d4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .footer-seccion a:hover {
+            color: #667eea;
+            text-decoration: underline;
+        }
+
+        /* Redes sociales */
+        .redes-sociales {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .redes-sociales a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #667eea;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .redes-sociales a:hover {
+            background-color: #764ba2;
+            transform: translateY(-3px);
+        }
+
+        /* Línea divisoria */
+        .footer-inferior {
+            border-top: 1px solid #444;
+            padding-top: 1.5rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Agrupación de selectores */
+        h2, h3 {
+            font-family: 'Arial', sans-serif;
+        }
+
+        nav a, button {
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .producto-nombre, .producto-precio {
+            margin: 0.5rem 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div>
+            <span id="logo">🛍️</span>
+            <h1>TechStore</h1>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#electronica">Electrónica</a></li>
+            <li><a href="#ropa">Ropa</a></li>
+            <li><a href="#hogar">Hogar</a></li>
+            <li><a href="#deportes">Deportes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <h2>Productos Destacados</h2>
+        
+        <!-- Galería de productos -->
+        <section class="productos-galeria">
+            <div class="producto-tarjeta">
+                <img src="Apple_16-inch-MacBook-Pro_111319_big.jpg.large.jpg" alt="Laptop" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="producto-nombre">Laptop Pro 15"</p>
+                    <p class="producto-descripcion">Procesador Intel i7, 16GB RAM, 512GB SSD</p>
+                    <p class="producto-precio">$1,299.99</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto-tarjeta">
+                <img src="descarga.jpeg" alt="Smartphone" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="producto-nombre">Smartphone X</p>
+                    <p class="producto-descripcion">6.5" OLED, 128GB almacenamiento, cámara 108MP</p>
+                    <p class="producto-precio">$799.99</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto-tarjeta">
+                <img src="audifonos.jpeg" alt="Auriculares" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="producto-nombre">Auriculares Inalámbricos</p>
+                    <p class="producto-descripcion">Cancelación de ruido, batería 30h, Bluetooth 5.0</p>
+                    <p class="producto-precio">$199.99</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto-tarjeta">
+                <img src="zapas.jpeg" alt="Zapatillas" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="producto-nombre">Zapatillas Running Pro</p>
+                    <p class="producto-descripcion">Suela amortiguadora, diseño ergonómico, ligeras</p>
+                    <p class="producto-precio">$129.99</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto-tarjeta">
+                <img src="almo.jpeg" alt="Almohada" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="producto-nombre">Almohada Ergonómica</p>
+                    <p class="producto-descripcion">Espuma viscoelástica, hipoalergénica, funda lavable</p>
+                    <p class="producto-precio">$49.99</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="producto-tarjeta">
+                <img src="tablet.jpeg" alt="Tablet" class="producto-imagen">
+                <div class="producto-info">
+                    <p class="producto-nombre">Tablet 10"</p>
+                    <p class="producto-descripcion">Pantalla LCD, 64GB almacenamiento, batería 8h</p>
+                    <p class="producto-precio">$349.99</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div>
+            <div class="footer-contenido">
+                <div class="footer-seccion">
+                    <h3>Contacto</h3>
+                    <p>📧 Email: <a href="mailto:info@techstore.com">info@techstore.com</a></p>
+                    <p>📞 Teléfono: <a href="tel:+34912345678">+34 (91) 234-5678</a></p>
+                    <p>📍 Dirección: Calle Principal 123, Madrid, España</p>
+                </div>
+
+                <div class="footer-seccion">
+                    <h3>Información</h3>
+                    <p><a href="#sobre-nosotros">Sobre Nosotros</a></p>
+                    <p><a href="#politica-privacidad">Política de Privacidad</a></p>
+                    <p><a href="#terminos-servicio">Términos de Servicio</a></p>
+                    <p><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></p>
+                </div>
+
+                <div class="footer-seccion">
+                    <h3>Síguenos</h3>
+                    <div class="redes-sociales">
+                        <a href="https://facebook.com/techstore" title="Facebook">f</a>
+                        <a href="https://twitter.com/techstore" title="Twitter">𝕏</a>
+                        <a href="https://instagram.com/techstore" title="Instagram">📷</a>
+                        <a href="https://youtube.com/techstore" title="YouTube">▶</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-inferior">
+                <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

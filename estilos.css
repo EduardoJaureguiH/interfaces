@@ -1,0 +1,57 @@
+body{
+    background-color: cornflowerblue;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+#titulo{
+    text-align: center;
+    align-items: centers;
+    height: 50px;
+    width: 50%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-left: 25%;
+
+}
+
+#seccion1{
+    text-align: center;
+    align-items: centers;
+    height: 40%;
+    width: 50%;
+    background-color: skyblue;
+    border-radius: 10px;
+    margin-left: 25%;   
+}
+#seccion2{
+    text-align: center;
+    align-items: centers;
+    height: 40%;
+    width: 50%;
+    background-color: aqua;
+    border-radius: 10px;
+    margin-left: 25%;   
+    font-family: Arial, Helvetica, sans-serif;
+}
+#seccion3{
+    text-align: center;
+    align-items: centers;
+    height: 60%;
+    width: 50%;
+    background-color: turquoise;
+    border-radius: 10px;
+    margin-left: 25%;  
+    border-color: black;
+    border: 2px solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#seccion3 img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+    opacity: 95%;
+}
