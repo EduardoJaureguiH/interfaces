@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Snow & Ski Shop</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../styles/estilos.css" />
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <!-- Barra de navegación principal -->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+                <div class="container">
+                    <a class="navbar-brand fw-bold" href="./index.html">HimalayaSKI</a>
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="./categorias.html">Categorías</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./ofertas.html">Ofertas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <button id="openSideMenu" class="btn btn-dark ms-2" type="button">Menú</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Menú lateral y fondo superpuesto -->
+        <div id="sideMenuOverlay" class="side-menu-overlay" aria-hidden="true"></div>
+        <aside id="sideMenu" class="side-menu" aria-hidden="true">
+            <div class="side-menu-header d-flex justify-content-between align-items-center">
+                <h2 class="h5 mb-0">Explorar tienda</h2>
+                <button id="closeSideMenu" class="btn btn-sm btn-outline-light" type="button" aria-label="Cerrar menú">✕</button>
+            </div>
+            <nav class="side-menu-body">
+                <ul class="side-menu-list">
+                    <li><a class="side-menu-link" href="./index.html#hero-store">Inicio</a></li>
+                    <li><a class="side-menu-link" href="./categorias.html">Categorías</a></li>
+                    <li><a class="side-menu-link" href="./productos.html">Productos</a></li>
+                    <li><a class="side-menu-link" href="./ofertas.html">Ofertas</a></li>
+                    <li><a class="side-menu-link" href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal de la home -->
+        <main class="flex-grow-1 py-5">
+            <!-- Hero principal con CTA -->
+            <section class="container mb-5" id="hero-store">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge text-bg-primary mb-3">Temporada 2026</span>
+                        <h1 class="display-5 fw-bold mb-3">Equipo de snowboard y ski para cada nivel</h1>
+                        <p class="lead text-secondary mb-4">Tablas, esquís, botas y accesorios con envío rápido y asesoramiento personalizado.</p>
+                        <a href="./productos.html" class="btn btn-primary btn-lg">Comprar ahora</a>
+                        <a href="./ofertas.html" class="btn btn-outline-dark btn-lg ms-2">Ver ofertas</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body p-4">
+                                <h2 class="h5 mb-3">Pack recomendado</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Tabla All-Mountain 158</li>
+                                    <li class="list-group-item">Botas térmicas ProFit</li>
+                                    <li class="list-group-item">Casco + gafas anti-niebla</li>
+                                </ul>
+                                <p class="mt-3 mb-0 text-secondary">Desde 649€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categorías rápidas -->
+            <section class="container mb-5" id="categorias">
+                <h2 class="h3 mb-4">Categorías</h2>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge text-bg-dark px-3 py-2 category-pill">Snowboards</span>
+                    <span class="badge text-bg-dark px-3 py-2 category-pill">Esquís</span>
+                    <span class="badge text-bg-dark px-3 py-2 category-pill">Botas</span>
+                    <span class="badge text-bg-dark px-3 py-2 category-pill">Ropa térmica</span>
+                    <span class="badge text-bg-dark px-3 py-2 category-pill">Accesorios</span>
+                </div>
+            </section>
+
+            <!-- Productos destacados -->
+            <section class="container mb-5" id="productos">
+                <h2 class="h3 mb-4 section-hover-title">Productos destacados</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="card h-100 shadow-sm product-card">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Snowboard Apex 158</h3>
+                                <p class="card-text text-secondary">Ideal para pista y fuera pista, núcleo de madera ultraligero.</p>
+                                <p class="fw-bold mb-0">399€</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100 shadow-sm product-card">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Ski Alpine XR</h3>
+                                <p class="card-text text-secondary">Control y estabilidad para carving en nieve dura.</p>
+                                <p class="fw-bold mb-0">459€</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card h-100 shadow-sm product-card">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Botas Glacier Pro</h3>
+                                <p class="card-text text-secondary">Ajuste térmico, suela antideslizante y máximo confort.</p>
+                                <p class="fw-bold mb-0">229€</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Oferta principal -->
+            <section class="container mb-5" id="oferta">
+                <div class="alert alert-info border-0 shadow-sm p-4 mb-0" role="alert">
+                    <h2 class="h4 mb-2">Oferta de lanzamiento</h2>
+                    <p class="mb-3">10% de descuento en tu primer pedido superior a 300€ usando el cupón <strong>SNOW10</strong>.</p>
+                    <a href="./productos.html" class="btn btn-info text-white">Aplicar oferta</a>
+                </div>
+            </section>
+
+            <!-- Acceso rápido al contacto -->
+            <section class="container" id="contacto">
+                <div class="p-4 p-md-5 rounded-3 bg-light border">
+                    <h2 class="h3 mb-3">Contacto</h2>
+                    <p class="text-secondary mb-4">¿Necesitas ayuda para elegir tu equipo? Te asesoramos por email o WhatsApp.</p>
+                    <a href="mailto:ventas@snowshop.com" class="btn btn-outline-primary">Contactar tienda</a>
+                </div>
+            </section>
+        </main>
+        <!-- Pie de página -->
+        <footer id="site-footer" class="bg-dark text-light py-4 mt-auto">
+            <div class="container">
+                <div class="row align-items-center gy-3">
+                    <div class="col-md-6">
+                        <h5>Snow & Ski Shop</h5>
+                        <small class="text-secondary">Equipamiento de invierno · Envíos 24/48h</small>
+                    </div>
+                    <div class="col-md-6 text-md-end footer-links">
+                        <a href="https://www.instagram.com/" class="text-light me-3">Instagram</a>
+                        <a href="https://www.tiktok.com/" class="text-light me-3">TikTok</a>
+                        <a href="https://www.youtube.com/" class="text-light">YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Import map para resolver Anime.js desde node_modules -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "animejs": "../node_modules/animejs/dist/modules/index.js"
+                }
+            }
+        </script>
+        <!-- Script principal con animaciones e interacciones -->
+        <script type="module" src="../js/bootstrap.js"></script>
+    </body>
+</html>

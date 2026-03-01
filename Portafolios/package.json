@@ -1,0 +1,16 @@
+{
+  "name": "portafolios",
+  "version": "1.0.0",
+  "description": "Proyecto web de tienda Snow/Ski con Bootstrap y animaciones Anime.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "animejs": "^4.3.6"
+  }
+}
